@@ -2,11 +2,16 @@ import logging
 
 from config import BOT_NAME
 from telegram import Update
-from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
+from telegram.ext import (
+  Application,
+  CommandHandler,
+  MessageHandler,
+  ContextTypes,
+  filters)
 
 logger = logging.getLogger(__name__)
 
-async def start_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def start_handler(update: Update) -> None:
   """
   Handle the /start command.
   """
