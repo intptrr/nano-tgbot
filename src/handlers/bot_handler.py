@@ -7,7 +7,8 @@ from telegram.ext import (
   CommandHandler,
   MessageHandler,
   ContextTypes,
-  filters)
+  filters
+)
 
 logger = logging.getLogger(__name__)
 
