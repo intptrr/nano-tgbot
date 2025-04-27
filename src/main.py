@@ -1,7 +1,7 @@
+import handlers
 import logging
 
 from config import BOT_TOKEN
-from handlers import bot_handler
 from telegram import Update
 from telegram.ext import Application
 
@@ -16,7 +16,7 @@ def main():
   app = Application.builder().token(BOT_TOKEN).build()
   logger.info("Bot started")
 
-  bot_handler.setup_handlers(app)
+  handlers.setup_handlers(app)
 
   app.run_polling(allowed_updates=Update.ALL_TYPES)
 
